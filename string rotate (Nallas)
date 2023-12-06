@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+class string_rotate
+{
+	public static void main(String args[])
+	{
+		Scanner s=new Scanner(System.in);
+		String str1=s.nextLine();
+		String str2=s.nextLine();
+		String anticlk="",clk="";
+		int n=str1.length();
+		anticlk=str1.substring(2,n) + str1.substring(0,2);
+		clk=str1.substring(n-2,n) + str1.substring(0,n-2);
+		if(str2.equals(clk) || str2.equals(anticlk))
+			System.out.println("Yes");
+		else
+			System.out.println("No");
+	}
+}
