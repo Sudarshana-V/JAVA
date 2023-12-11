@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+class largest_array_fibanocci
+{
+	public static void main(String args[])
+	{
+		Scanner s=new Scanner(System.in);
+		//enter no of elements
+		int n=s.nextInt();
+		int arr[]=new int[n];
+		//enter elements
+		for(int i=0;i<n;i++)
+			arr[i]=s.nextInt();
+		int n1=1,n2=1,n3=n1+n2;
+		int fibanocci[]=new int[10];
+		fibanocci[0]=0;
+		for(int i=0;i<9;i++)
+		{
+			fibanocci[i+1]=n2;
+			n1=n2;
+			n2=n3;
+			n3=n1+n2;
+		}
+		//to get count of equal elements
+		int count=0;
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<10;j++)
+			{
+				if(arr[i]==fibanocci[j])
+					System.out.print(arr[i]+ " ");   //print subset elements
+			}
+		}
+	}
+}
