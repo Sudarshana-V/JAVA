@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+class string_append
+{
+	public static void main(String args[])
+	{
+		Scanner s=new Scanner(System.in);
+		String str=s.nextLine();
+		int n=str.length();
+		char arr[]=new char[n];
+		for(int i=0;i<n;i++)
+			arr[i]=str.charAt(i);
+		for(int i=0;i<n;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(arr[i]==arr[j])
+					arr[j]='#';
+			}
+		}
+		for(int i=0;i<n;i++)
+			System.out.print(arr[i]);
+	}
+}
